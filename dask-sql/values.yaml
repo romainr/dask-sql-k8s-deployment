@@ -1,7 +1,7 @@
 dask:
   worker:
     # FIXME: Fill in how many workers you want to spawn
-    replicas: 6
+    replicas: 1
     env:
     # Additionally install packages for xgboost and S3 access
     # FIXME: add additional packages if you want them on the workers
@@ -20,5 +20,5 @@ dask_sql:
   # FIXME: add additional packages if you want them on the SQL server
   - name: EXTRA_CONDA_PACKAGES
     value: s3fs=0.5.1 dask-xgboost=0.1.11 xgboost=0.90 aiobotocore=1.1.2 botocore=1.17.44 -c conda-forge
-  # FIXME: If you encounter startup problems, increase this number
-  probeDelay: 600
+  # FIXME: If you encounter startup problems, increase this number from 600
+  probeDelay: 1000
