@@ -1,8 +1,0 @@
-# Configmap for hue and mysql
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: hue
-data:
-  hue.ini: |-
-    {{ .Files.Get "files/hue.ini" |  nindent 4 }}
